@@ -1,0 +1,21 @@
+<header>
+    <div class="appbar-container">
+        <h3 class="making-easier-color">[ Making your Life Easier ]</h3>
+        <h1 class="app-title"><strong>Discovering The world</strong></h1>
+        <nav class="navigation-container">
+            <ul class="navigation-items-layout">
+                <li 
+                    class="navigation-item" 
+                    *ngFor="let item of navigationItems"
+                    [ngClass]="{'selected' : selectedItem === item.label}"
+                    (click)="selectItem(item.label)"
+                >
+                    <a 
+                        [routerLink]="item.route"
+                        [ngClass]="{'selected': selectedItem === item.label}" 
+                    >{{item.label}}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

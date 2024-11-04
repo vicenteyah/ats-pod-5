@@ -1,4 +1,6 @@
 <app-navbar></app-navbar>
+<button (click)="openModal()" class="btn-open-modal"> <mat-icon style="cursor: pointer; color: #fff;">edit</mat-icon></button>
+<app-modal *ngIf="isModalOpen" (close)="closeModal()"></app-modal>
 <div class="content">
     <router-outlet></router-outlet>
 </div>

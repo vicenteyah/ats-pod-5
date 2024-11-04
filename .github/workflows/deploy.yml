@@ -30,14 +30,14 @@ jobs:
         run: npm run build -- --output-path=dist/ats-project/browser
 
       - name: List dist folder content
-        run: ls -R dist
+        run: ls -R dist/ats-project/browser
 
       - name: Archive artifact
         if: success()
         uses: actions/upload-artifact@v3
         with:
-          name: build-artifact
-          path: dist/ats-project/browser
+          name: build-artifact  
+          path: dist/ats-project/browser 
 
   deploy:
     runs-on: ubuntu-latest

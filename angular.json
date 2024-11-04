@@ -31,7 +31,8 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/ats-pod-5/"
+            "baseHref": "/ats-pod-5/",
+            "outputHashing": "all"
           },
           "configurations": {
             "production": {
@@ -92,6 +93,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
